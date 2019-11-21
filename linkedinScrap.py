@@ -6,7 +6,10 @@ def scrap(jobsURL):
     try:
         page = urllib.request.urlopen(jobsURL)
         soup = BeautifulSoup(page, 'html.parser')
-        return soup
+        if soup is not None:
+            return soup
+        else:
+            return None
     except:
         print('Error while scraping information from LinkedIn')
 
