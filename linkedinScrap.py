@@ -36,3 +36,9 @@ def printJobs(finalList):
         print('DONE!')
     else:
         return None
+    
+def extractJobs(url):
+    soup = scrap(url)
+    jobs = getJobs(soup)
+    printJobs(jobs)
+
