@@ -10,7 +10,7 @@ def scrap(jobsURL):
             return soup
         else:
             return None
-    except:
+    except NameError:
         print('Error while scraping information from LinkedIn')
 
 def getJobs(soup):
